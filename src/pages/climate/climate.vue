@@ -87,7 +87,7 @@
             <label class="mb-0">Fan Modes</label>
             <input v-model="settings.fanModes" v-validate="'required'" :disabled="hassInfoStatus" data-vv-as="fan modes" name="settings.fanModes" type="text" class="form-control form-control-sm">
             <small v-if="errors.has('settings.fanModes')" class="form-text text-muted">{{ errors.first('settings.fanModes') }}</small>
-            <small v-else class="form-text text-muted">Ex: auto, level1, level2, level3, level4</small>
+            <small v-else class="form-text text-muted">Ex: auto, low, mid, high</small>
           </div>
           <div class="form-group mb-1">
             <button type="button" :disabled="hassInfoStatus" class="btn btn-primary btn-sm mt-2" @click="setupComponent()"><i class="fas fa-cogs mr-1" /> Create table code</button>

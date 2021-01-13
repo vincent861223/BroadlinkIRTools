@@ -26,7 +26,7 @@ export default {
         minTemperature: 18,
         maxTemperature: 32,
         operationModes: "cool, heat",
-        fanModes: "auto, level1, level2, level3, level4"
+        fanModes: "auto, low, mid, high"
       },
       sendTarget: undefined
     };
