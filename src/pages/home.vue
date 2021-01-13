@@ -34,10 +34,10 @@
               <template v-if="showTip"> or get it from <a :href="hassInfo.url+'/profile'" target="_blank">here</a></template>
             </small>
           </div>
-          <div class="form-group mb-1" :class="{'is-invalid':errors.has('hassInfo.broadlinkIp')}">
-            <label class="mb-0">Broadlink IP address</label>
-            <input v-model="hassInfo.broadlinkIp" v-validate="'required'" data-vv-as="broadlink service" name="hassInfo.broadlinkIp" type="text" class="form-control form-control-sm">
-            <small v-if="errors.has('hassInfo.broadlinkIp')" class="form-text text-muted">{{ errors.first('hassInfo.broadlinkIp') }}</small>
+          <div class="form-group mb-1" :class="{'is-invalid':errors.has('hassInfo.broadlinkEntityId')}">
+            <label class="mb-0">Broadlink Entity ID</label>
+            <input v-model="hassInfo.broadlinkEntityId" v-validate="'required'" data-vv-as="broadlink service" name="hassInfo.broadlinkEntityId" type="text" class="form-control form-control-sm">
+            <small v-if="errors.has('hassInfo.broadlinkEntityId')" class="form-text text-muted">{{ errors.first('hassInfo.broadlinkEntityId') }}</small>
           </div>
           <div class="form-group mb-1">
             <div class="row align-items-center">
@@ -81,7 +81,7 @@ export default {
       hassInfo: {
         url: "https://",
         token: undefined,
-        broadlinkIp: "192.168.1.13"
+        broadlinkEntityId: "remote.broadlink_rm_pro_remote"
       }
     };
   },

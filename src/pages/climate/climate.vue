@@ -16,16 +16,16 @@
           <div class="form-group">
             <h5>Connection status <span class="badge badge-success">{{$store.state.socketStatus}}</span></h5>
           </div>
-          <div v-if="hassInfo" class="form-group mb-1" :class="{'is-invalid':errors.has('hassInfo.broadlinkIp')}">
-            <label class="mb-0">You can change Broadlink IP</label>
-            <input v-model="hassInfo.broadlinkIp" v-validate="'required'" data-vv-as="broadlink service" name="hassInfo.broadlinkIp" type="text" class="form-control form-control-sm">
-            <small v-if="errors.has('hassInfo.broadlinkIp')" class="form-text text-muted">{{ errors.first('hassInfo.broadlinkIp') }}</small>
-            <small v-else class="form-text text-muted">Broadlink IP address</small>
+          <div v-if="hassInfo" class="form-group mb-1" :class="{'is-invalid':errors.has('hassInfo.broadlinkEntityId')}">
+            <label class="mb-0">You can change Broadlink Entity ID</label>
+            <input v-model="hassInfo.broadlinkEntityId" v-validate="'required'" data-vv-as="broadlink service" name="hassInfo.broadlinkEntityId" type="text" class="form-control form-control-sm">
+            <small v-if="errors.has('hassInfo.broadlinkEntityId')" class="form-text text-muted">{{ errors.first('hassInfo.broadlinkEntityId') }}</small>
+            <small v-else class="form-text text-muted">Broadlink Entity ID</small>
           </div>
           <div class="form-group mb-1">
             <div class="row align-items-center mt-2">
               <div class="col-6">
-                <button type="button" class="btn btn-primary btn-sm" @click="changeBroadlinkIp()">Change command</button>
+                <button type="button" class="btn btn-primary btn-sm" @click="changeBroadlinkEntityID()">Change command</button>
               </div>
               <div v-if="hassInfoStatus" class="col-6 text-right">
                 <small class="pt-3">Press F5 to reconnect</small>

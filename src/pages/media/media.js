@@ -123,10 +123,10 @@ export default {
       console.log("Command was send..", _target.key);
       this.sendTarget = _target;
       this.$set(this.irData[this.sendTarget.key], "iconClass", config.iconIr.learning);
-      helper.sendBroadlinkLearnCmd(this.$store.state.hassInfo.broadlinkIp);
+      helper.sendBroadlinkLearnCmd(this.$store.state.hassInfo.broadlinkEntityId, "BroadlinkIRTools_media", _target.key);
     },
-    changeBroadlinkIp() {
-      this.$store.state.hassInfo.broadlinkIp = this.hassInfo.broadlinkIp;
+    changeBroadlinkEntityId() {
+      this.$store.state.hassInfo.broadlinkEntityId = this.hassInfo.broadlinkEntityId;
     },
     mixSource() {
       if (this.sourceSelected.length < 2) return alert("Chọn tối thiểu 2 đơn vị");

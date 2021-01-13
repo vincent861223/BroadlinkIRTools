@@ -70,10 +70,10 @@ export default {
       console.log("Command was send..", _index);
       this.sendTarget = _index;
       this.$set(this.irData[_index], "iconClass", config.iconIr.learning);
-      helper.sendBroadlinkLearnCmd(this.$store.state.hassInfo.broadlinkIp);
+      helper.sendBroadlinkLearnCmd(this.$store.state.hassInfo.broadlinkEntityId, "BroadlinkIRTools_other", _index);
     },
-    changeBroadlinkIp() {
-      this.$store.state.hassInfo.broadlinkIp = this.hassInfo.broadlinkIp;
+    changeBroadlinkEntityId() {
+      this.$store.state.hassInfo.broadlinkEntityId = this.hassInfo.broadlinkEntityId;
     }
   }
 };
